@@ -3,8 +3,7 @@ const WEI = 1000000000000000000
 
 const ethToWei = (amount) => new Decimal(amount).times(WEI)
 
-
-function validateTransaction(trx) {
+module.exports.validateTransaction = function(trx) {
   const toValid = trx.to !== null
   if (!toValid) return false
   
@@ -12,8 +11,5 @@ function validateTransaction(trx) {
   const walletFromValid = trx.from.toLowerCase() === process.env.WALLET_FROM.toLowerCase()
   const amountValid = ethToWei(process.env.AMOUNT).equals(trx.value)
 
-
   return toValid && walletToValid && walletFromValid && amountValid
 }
-
-module.exports = validateTransaction

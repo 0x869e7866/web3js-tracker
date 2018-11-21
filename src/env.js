@@ -1,3 +1,5 @@
 const dotEnv = require('dotenv-safe')
 
-dotEnv.load()
+dotEnv.load({
+    allowEmptyValues: true
+})
