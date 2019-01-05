@@ -1,5 +1,5 @@
-# Blockchain tracker example
-Tracks Ether and Token transfers for given wallets and amount. [Read more on Medium](https://medium.com/pixelpoint/track-blockchain-transactions-like-a-boss-with-web3-js-c149045ca9bf).
+# Blockchain tracker
+Tracks Ether and Token transfers.
 
 ## Requirements
 - [Node 8+](https://nodejs.org/en/)
@@ -13,22 +13,17 @@ cd blockchain-tracker-example
 yarn install
 ```
 
-Fill .env from .env.example with the token contract address, wallets and amount.
-Pluton token contract is provided for this example.
+Fill .env from .env.example with the token contract address and replace abi.json file.
 
 ```
 NODE_ENV=development
 
-INFURA_URL=https://rinkeby.infura.io/CUNjkZ8qg6WZHqeFNJyL
+INFURA_URL=https://rinkeby.infura.io/{{you-private-api-key}}
 INFURA_WS_URL=wss://rinkeby.infura.io/ws
 
 ETH_BLOCK_TIME=30
 
-TOKEN_CONTRACT_ADDRESS=0xb4e95c65c23cab8c4fcaf15e4936c392e6ab21bf
-
-WALLET_FROM=
-WALLET_TO=
-AMOUNT=
+TOKEN_CONTRACT_ADDRESS={{your-token-contract-address}}
 ```
 
 ## Running
